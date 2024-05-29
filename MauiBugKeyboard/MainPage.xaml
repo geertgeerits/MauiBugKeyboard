@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBugKeyboard.MainPage"
+             Loaded="OnPageLoaded">
+
+    <NavigationPage.TitleView>
+        <Label
+            Text="Title"
+            HeightRequest="50">
+        </Label>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid
+                RowDefinitions="Auto, Auto, Auto"
+                ColumnDefinitions="300">
+
+                <Border Grid.Row="0" StrokeThickness="2" Stroke="Black" >
+                    <Label
+                        BackgroundColor="LightGray"
+                        HeightRequest="50"
+                        TextColor="Black"
+                        FontSize="20"
+                        Text="Enter a number" />
+                </Border>
+
+                <Border Grid.Row="1" StrokeThickness="2" Stroke="Black" >
+                    <Entry
+                        x:Name="EntNumber"
+                        BackgroundColor="LightBlue"
+                        Keyboard="Numeric"
+                        ReturnType="Next"
+                        HorizontalOptions="Fill"
+                        TextColor="Black" />
+                </Border>
+            </Grid>
+        
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
